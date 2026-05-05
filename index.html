@@ -357,6 +357,161 @@
       line-height: 1.55;
     }
 
+    /* ── BUILDING ── */
+    .building {
+      padding: 100px 24px;
+    }
+
+    .building-inner {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .product-card {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 36px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .product-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--purple), var(--cyan));
+    }
+
+    .product-badge {
+      display: inline-block;
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--cyan);
+      background: rgba(34,211,238,0.08);
+      border: 1px solid rgba(34,211,238,0.2);
+      border-radius: 4px;
+      padding: 3px 10px;
+      margin-bottom: 16px;
+    }
+
+    .product-title {
+      font-size: 1.6rem;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      margin-bottom: 12px;
+      background: linear-gradient(135deg, var(--purple) 0%, var(--cyan) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .product-tagline {
+      font-size: 1rem;
+      color: var(--text2);
+      line-height: 1.65;
+      margin-bottom: 24px;
+      max-width: 680px;
+    }
+
+    .product-pillars {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 12px;
+      margin-bottom: 28px;
+    }
+
+    .pillar {
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 16px;
+    }
+
+    .pillar-icon { font-size: 1.2rem; margin-bottom: 8px; }
+
+    .pillar-title {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 4px;
+    }
+
+    .pillar-desc {
+      font-size: 0.78rem;
+      color: var(--text2);
+      line-height: 1.5;
+    }
+
+    details.product-more { margin-top: 4px; }
+
+    details.product-more summary {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--purple);
+      cursor: pointer;
+      list-style: none;
+      user-select: none;
+      transition: color 0.15s;
+    }
+
+    details.product-more summary::-webkit-details-marker { display: none; }
+    details.product-more summary:hover { color: var(--cyan); }
+
+    .summary-arrow {
+      display: inline-block;
+      transition: transform 0.25s;
+      font-style: normal;
+    }
+
+    details[open] .summary-arrow { transform: rotate(90deg); }
+
+    .product-more-content {
+      margin-top: 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 16px;
+    }
+
+    .more-block { }
+
+    .more-block-title {
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--purple);
+      margin-bottom: 10px;
+    }
+
+    .more-block ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .more-block li {
+      font-size: 0.83rem;
+      color: var(--text2);
+      line-height: 1.5;
+      padding-left: 12px;
+      position: relative;
+    }
+
+    .more-block li::before {
+      content: '–';
+      position: absolute;
+      left: 0;
+      color: var(--text3);
+    }
+
     /* ── CTA ── */
     .cta-section {
       padding: 100px 24px;
@@ -604,6 +759,82 @@
         <div class="project-name">ai-personal-assistant</div>
         <div class="project-desc">Universal AI assistant – text, voice (Whisper + TTS), vision, image generation (DALL-E 3), RAG over your own documents.</div>
       </a>
+    </div>
+  </div>
+</section>
+
+<!-- ── BUILDING ── -->
+<section class="building">
+  <div class="building-inner">
+    <div class="section-tag reveal">What I'm building</div>
+    <h2 class="section-title reveal">Products in development</h2>
+
+    <div class="product-card reveal">
+      <div class="product-badge">In development · 2026</div>
+      <div class="product-title">PsychoAI</div>
+      <p class="product-tagline">
+        An AI platform for gestalt therapy – a digital therapist for clients
+        and an intelligent assistant for real therapists.
+        Think of it as ADAS for psychotherapy: a system that accumulates the collective
+        experience of thousands of sessions and makes it available to every practitioner.
+      </p>
+
+      <div class="product-pillars">
+        <div class="pillar">
+          <div class="pillar-icon">🧑‍💼</div>
+          <div class="pillar-title">For clients</div>
+          <div class="pillar-desc">AI gestalt therapist in Telegram – sessions, reflective diary, metaphorical cards, weekly reports.</div>
+        </div>
+        <div class="pillar">
+          <div class="pillar-icon">🩺</div>
+          <div class="pillar-title">For therapists</div>
+          <div class="pillar-desc">Client card, session transcription, pattern analysis, intervention suggestions based on collective experience.</div>
+        </div>
+        <div class="pillar">
+          <div class="pillar-icon">🧠</div>
+          <div class="pillar-title">Collective intelligence</div>
+          <div class="pillar-desc">A neural network of psychology trained on real session outcomes – gets smarter with every interaction.</div>
+        </div>
+      </div>
+
+      <details class="product-more">
+        <summary>
+          <span class="summary-arrow">▶</span>
+          Read more about the system
+        </summary>
+        <div class="product-more-content">
+          <div class="more-block">
+            <div class="more-block-title">Client experience</div>
+            <ul>
+              <li>Daily diary – voice or text, 5 minutes an evening</li>
+              <li>AI therapist sessions – from 10-minute check-ins to full 50-minute sessions</li>
+              <li>Choose a therapist persona: Perls, Rogers, Yalom or real practitioners</li>
+              <li>Metaphorical card work – AI-guided reflection around a generated image</li>
+              <li>Weekly & monthly reports with dynamics and patterns</li>
+              <li>Share reports with a real therapist</li>
+            </ul>
+          </div>
+          <div class="more-block">
+            <div class="more-block-title">Therapist tools</div>
+            <ul>
+              <li>Client card – notes after sessions, voice or text</li>
+              <li>Session transcription with gestalt mechanism detection</li>
+              <li>Pre-session briefing – what happened since last time</li>
+              <li>Intervention recommendations from collective experience</li>
+              <li>Therapist marketplace – AI matches clients to practitioners</li>
+            </ul>
+          </div>
+          <div class="more-block">
+            <div class="more-block-title">Privacy & architecture</div>
+            <ul>
+              <li>Anonymisation before sending to cloud LLMs</li>
+              <li>Client controls exactly what gets shared and with whom</li>
+              <li>Roadmap to fully local models – zero data leakage</li>
+              <li>Therapist personas via LoRA adapters on base models</li>
+            </ul>
+          </div>
+        </div>
+      </details>
     </div>
   </div>
 </section>
